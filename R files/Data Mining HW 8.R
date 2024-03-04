@@ -1,4 +1,4 @@
-# Homework - Data Mining Tasks
+# Data Mining Tasks
 
 # PART-1: Logistic Regression for Accident Severity Prediction
 
