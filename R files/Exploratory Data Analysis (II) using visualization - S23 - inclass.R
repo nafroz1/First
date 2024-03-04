@@ -1,7 +1,5 @@
 # Exploratory Data Analysis using Visualization
 
-
-
 # BostonHousing.csv
 # census.csv
 
