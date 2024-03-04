@@ -36,10 +36,4 @@ plot_ly(data = temp0 ,
 
 
 
-#-------------------------------------------------------------------------------
-
-dow1 <- read_excel("C:/Users/Nahid/Desktop/R/R files/Dow-1.xlsx")
-View(dow1)
-
-
 
