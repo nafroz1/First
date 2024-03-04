@@ -1,4 +1,4 @@
-# Bar plots and correlogram
+# Box plots and correlogram
 
 library(ggplot2) 
 library(plotly)
