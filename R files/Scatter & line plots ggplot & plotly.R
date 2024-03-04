@@ -57,9 +57,7 @@ plot_ly(data = temp1 ,
         type = 'scatter' ,
         mode = 'line')
 
-# Just imagine that we would like to see this by average by month, 
-# meaning x axis only having Jan ~ Dec
-# So we need to create the average per month
+# Average per month
 
 temp2 <- temp1 %>% 
   mutate(month2 = month(date , label = T)) %>% 
