@@ -5,9 +5,6 @@ library(plotly)
 # Data
 temp0 <- mtcars
 
-# Histogram using ggplot2
-# http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization
-
 ggplot(temp0, aes(x=mpg)) + 
   geom_histogram(binwidth=3)
 
