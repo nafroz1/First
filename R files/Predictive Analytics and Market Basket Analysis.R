@@ -1,6 +1,4 @@
-# Homework
-
-# PART-1
+# Logistic Regression for Accident Severity Prediction
 
 # The file accidents.csv contains a subset of information on actual automobile
 # accidents in 2001 in the United States that involved one of three 

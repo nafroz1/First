@@ -1,4 +1,4 @@
-# Bar plots and correlogram
+# Box plots and correlogram
 
 library(ggplot2) 
 library(plotly)
@@ -23,14 +23,12 @@ ggplot(mtcars, aes(x = "", y = mpg)) +
 # Box plot comparing the distribution between
 # 2 levels of the same variable
 
-t.test(mtcars$mpg ~ mtcars$am)
-
 ggplot(mtcars, aes(x = "", y = mpg , 
                    fill = as.factor(am))) + 
   geom_boxplot() + 
   xlab("") + 
   ylab("MPG") + 
-  ggtitle("Manual cars, in general, cars are more fuel efficient")
+  ggtitle("Manual cars are more fuel efficient")
 
 ##################################
 #### Box Plot Now with plotly ####
@@ -47,6 +45,9 @@ plot_ly(data = mtcars ,
 # Box plot comparing the distribution between
 # 2 levels of the same variable
 
+t.test(mtcars$mpg - mtcars$am)
+
+
 plot_ly(data = mtcars ,
         y = ~mpg, 
         color = ~as.factor(am) ,
@@ -57,13 +58,6 @@ plot_ly(data = mtcars ,
 ##################################
 
 cor(mtcars$mpg , mtcars$wt)
-#negative correlation : the higher the amounts per gallons
-# less weight or less mouth per gallon, more weight. 
-#It's in averse relationship.
-#Correlation is only between continuous variables but
-# cylinder is categorical
-
-
 
 cor(mtcars)
 
@@ -75,7 +69,9 @@ str(cor_mtcars)
 
 ggcorrplot(cor_mtcars,type ='upper')
 
-ggcorrplot(cor_mtcars, 
+ggcorrplot(cor_mtcars,type ='lower')
+
+meanggcorrplot(cor_mtcars, 
            method = "circle" ,
            type = 'lower' ,
            lab = T,
@@ -85,13 +81,9 @@ ggcorrplot(cor_mtcars,
 
 palette <- colorRampPalette(c("orange", "white" , "darkblue"))
 
-plot_ly (z = cor_mtcars, type = "heatmap", colors = palette(50) , 
-         x=colnames(cor_mtcars), y=rownames(cor_mtcars))
+plot_ly (z = cor_mtcars, type = "heatmap", colors = palette(50) , x=colnames(cor_mtcars), y=rownames(cor_mtcars))
         
 
 plot_ly(z = cor_mtcars, type = "heatmap" ,
         colors = palette(50) ,
         x=colnames(cor_mtcars), y=rownames(cor_mtcars))
-#More gears more miles per gallon ; moderate
-#More hp less miles per gallon
-#

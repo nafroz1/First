@@ -1,17 +1,5 @@
 # Exploratory Data Analysis using Visualization
 
-# Steps in data mining
- 
-# 1) State the the purpose of the data mining project.
-# 2) Get the dataset and examine it statistically and graphically.
-# 3) Transform the variables if necessary and impute missing values.
-# 4) Partition data into training and validation datasets.
-# 5) Fit predictive models (e.g., regression, etc).
-# 6) Compare the models using the validation dataset.
-# 7) Pick the best model and deploy the model.
-
-# The following datasets are needed in this part:
-
 # BostonHousing.csv
 # census.csv
 
