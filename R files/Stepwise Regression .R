@@ -1,4 +1,4 @@
-# Regression - Part2
+#Regression - Part2
 # Dimension Reduction: Variable selection procedures
 #When you have lot of columns in a typical company data base, some of them are not useful so you cut them out = dimention reduction)
 # Stepwise Regression
